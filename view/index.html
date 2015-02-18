@@ -1,0 +1,32 @@
+<html>
+<head>
+	<link href="/view/strawpoll/strawpoll.css" rel="stylesheet"/>
+  
+	<script src="/view/strawpoll/jquery.min.js"></script>	
+	<script src="/view/strawpoll/jquery.transit.min.js"></script>
+	<script src="/view/strawpoll/strawpoll.js"></script>
+	
+	<script src="/viewsetup.js"></script>
+</head>
+<body>
+<div id="pollwrapper">
+	<div id="pollheader"><span id="polltitle"></span>  <span style="color:#88AAFF">strawpoll.me/<span id="pollid"></span></span></div>
+	<div id="pollbody-two">
+		<span id="pollteam1container"><span id="pollteam1"></span> <span id="pollvotes1"></span></span>
+		<span id="pollteam2container"><span id="pollvotes2"></span> <span id="pollteam2"></span></span>
+		<div id="pollbarcontainer">
+			<div id="pollpctcontainer">
+				<span id="pollpct1">0%</span>
+				<span id="pollpct2">0%</span>
+			</div>
+			<div id="pollbar1"></div>
+			<div id="pollbar2" class="pollbar-two pbar2"></div>
+		</div>
+	</div>
+	<div id="pollbody-multi">
+		<table id="multicontainer" style="width:100%;border-collapse:collapse;">
+		</table>
+	</div>
+</div>
+</body>
+</html>

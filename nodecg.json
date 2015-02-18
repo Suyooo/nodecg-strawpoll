@@ -1,0 +1,22 @@
+{
+  "name": "strawpoll",
+  "version": "0.3.0",
+  "nodecgDependency": ">= 0.4.0",
+  "homepage": "http://suyo.be",
+  "authors": [
+    "Anthony Oetzmann <aironaudio@googlemail.com>",
+    "Suyooo <me@suyo.be>"
+  ],
+  "description": "Can display poll results from strawpoll.me",
+  "resolutions": [
+    "720p"
+  ],
+  "extension": {
+    "express": true,
+    "path": "extension.js"
+  },
+  "dependencies": {
+    "request": "^2.51.0"
+  },
+  "license": "MIT"
+}

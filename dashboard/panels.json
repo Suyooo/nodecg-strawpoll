@@ -1,0 +1,10 @@
+[
+  {
+    "name": "pollPanel",
+    "title": "StrawPoll",
+    "width": 2,
+    "file": "panel.html",
+    "faIcon": "fa-question",
+    "viewUrl": "/view/strawpoll/index.html"
+  }
+]

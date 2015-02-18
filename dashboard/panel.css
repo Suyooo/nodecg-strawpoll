@@ -1,0 +1,55 @@
+#toth-overlay .control-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #959595;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+/* rosters */
+.redteam input {
+  border-color: #f5333e;
+}
+
+.bluteam input {
+  border-color: #0a80dd;
+}
+
+.rosterrow .cell {
+    width: 50%;
+}
+
+.rosterrow input {
+	padding: 0;
+	font-size: 70%;
+    width:100%;
+}
+
+.classicon {
+    height: 16px;
+    width: 16px;
+    background-size: 100% auto;
+    background-image: url("/view/toth-overlay/img/icons.png"); 
+    margin: 3px 2px -3px;
+}
+
+.cell {
+    display:table-cell;
+}
+
+.table {
+    display: table;
+    width: 100%;
+}
+
+.triplet {
+    display: table;
+    width: 100%;
+}
+
+.row {
+    display: table-row;
+    width: 100%;
+    margin-bottom: 0.2em;
+}
