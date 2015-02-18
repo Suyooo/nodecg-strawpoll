@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nodecg-nowplaying
 =================
 
@@ -12,3 +13,7 @@ You may want to edit:
 The panel on the dashboard allows you to set:  
 -- The StrawPoll ID - the ID is the number from the URL, as in `http://strawpoll.me/<id>/r`  
 -- Display Mode. 1v1 will only display the first two answers (in alphabetical order), multiple will show all of them
+=======
+# nodecg-strawpoll
+ A bundle for https://github.com/nodecg/nodecg showing the currently playing song.
+>>>>>>> f8532ee8b4f0bbe43f80bd3463977804c51e2909
