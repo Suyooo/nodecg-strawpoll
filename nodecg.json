@@ -15,8 +15,5 @@
     "express": true,
     "path": "extension.js"
   },
-  "dependencies": {
-    "request": "^2.51.0"
-  },
   "license": "MIT"
 }
