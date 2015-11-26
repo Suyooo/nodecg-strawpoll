@@ -1,9 +1,9 @@
-$(document).on('ncgReady', function () {
+$(document).ready(function () {
 	nodecg.listenFor('strawpoll-show', showPolls);
 	nodecg.listenFor('strawpoll-hide', function(data) {
 	  hidePolls(false);
 	});
-	
+
 	var pollID = 0;
 	var pollTO;
 	var pollReq;
@@ -23,11 +23,11 @@ $(document).on('ncgReady', function () {
 		$('#pollbarcontainer').removeClass("pbar2");
 		$.ajax({url: "http://"+nodecg.config.host+":"+nodecg.config.port+"/strawpoll/"+pollID, data: {}, dataType: "json",
 			success: function(data){
-				if(data){					
-					pollTO = setTimeout(updatePoll,250);					
+				if(data){
+					pollTO = setTimeout(updatePoll,250);
 					$('#polltitle').html(data.title);
 					$('#pollid').html(pollID);
-					
+
 					var options = new Array();
 					var c = 0;
 					var votesum = 0;
@@ -42,7 +42,7 @@ $(document).on('ncgReady', function () {
 						return ((a.name < b.name) ? -1 : ((a.name == b.name) ? 0 : 1));
 					});
 					if (c<2) return;
-					
+
 					if (pollMode==0) {
 						console.log("a");
 						$('#pollheader').delay(100).transition({
@@ -59,13 +59,13 @@ $(document).on('ncgReady', function () {
 							'padding-top': '15px',
 							'padding-bottom': '15px'
 						}, 500, 'ease-out');
-						
+
 						$('#pollteam1').text(options[0].name);
 						$('#pollteam2').text(options[1].name);
 						$('#pollvotes1').text(options[0].votes+" vote"+((options[0].votes!=1) ? "s" : ""));
 						$('#pollvotes2').text(options[1].votes+" vote"+((options[1].votes!=1) ? "s" : ""));
 						$('#pollvotes2').css("left",665-$('#pollvotes2').width()-$('#pollteam2').width());
-						
+
 						votesum = options[0].votes+options[1].votes;
 						if (votesum>0) {
 							var vote1pct = options[0].votes/votesum*100;
@@ -76,7 +76,7 @@ $(document).on('ncgReady', function () {
 							$('#pollpct2').text("0%");
 						}
 						$('#pollpct2').css("left",590-$('#pollpct2').width());
-						
+
 						$('#pollbar1').transition({
 							'width': vote1pct+'%'
 						  }, 250);
@@ -103,7 +103,7 @@ $(document).on('ncgReady', function () {
 							'padding-top': '15px',
 							'padding-bottom': '15px'
 						}, 500, 'ease-out');
-						
+
 						$("#multicontainer").html("");
 						for (var oc = 0; oc<c; oc++) {
 							var option = $("<tr>",{id:"option"+oc});
@@ -162,12 +162,12 @@ $(document).on('ncgReady', function () {
 						return ((a.name < b.name) ? -1 : ((a.name == b.name) ? 0 : 1));
 					});
 					if (c<2) return;
-					
+
 					if (pollMode==0) {
 						$('#pollvotes1').html(options[0].votes+" vote"+((options[0].votes!=1) ? "s" : ""));
 						$('#pollvotes2').html(options[1].votes+" vote"+((options[1].votes!=1) ? "s" : ""));
 						$('#pollvotes2').css("left",665-$('#pollvotes2').width()-$('#pollteam2').width());
-						
+
 						votesum = options[0].votes+options[1].votes;
 						if (votesum>0) {
 							var vote1pct = options[0].votes/votesum*100;
@@ -178,7 +178,7 @@ $(document).on('ncgReady', function () {
 							$('#pollpct2').html("0%");
 						}
 						$('#pollpct2').css("left",590-$('#pollpct2').width());
-						
+
 						$('#pollbar1').transition({
 							'width': vote1pct+'%'
 						  }, 250);
