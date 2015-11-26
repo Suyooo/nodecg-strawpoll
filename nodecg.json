@@ -1,7 +1,7 @@
 {
   "name": "strawpoll",
   "version": "0.5.0",
-  "nodecgDependency": "^0.5",
+  "nodecgDependency": "^0.6",
   "homepage": "http://suyo.be",
   "authors": [
     "Anthony Oetzmann <aironaudio@googlemail.com>",
@@ -13,7 +13,7 @@
   ],
   "extension": {
     "express": true,
-    "path": "extension.js"
+    "path": "index.js"
   },
   "license": "MIT"
 }

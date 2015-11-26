@@ -1,8 +1,8 @@
-var express = require('express'),
-    app = express(),
-	request = require('request');
-
 module.exports = function(nodecg) {
+    var express = require('express'),
+        app = express(),
+        request = require('request');
+    
     app.get('/strawpoll/:id', function(req, res) {
 		url = 'http://strawpoll.me/api/v2/polls/'+req.params.id;
 
@@ -17,5 +17,5 @@ module.exports = function(nodecg) {
 		})
     });
 
-    return app;
+    nodecg.mount(app);
 };

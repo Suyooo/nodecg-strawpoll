@@ -21,7 +21,7 @@ $(document).ready(function () {
 		$('#pollbar1').css("width","0%");
 		$('#pollbar2').css("width","0%");
 		$('#pollbarcontainer').removeClass("pbar2");
-		$.ajax({url: "http://"+nodecg.config.host+":"+nodecg.config.port+"/strawpoll/"+pollID, data: {}, dataType: "json",
+		$.ajax({url: "/strawpoll/"+pollID, data: {}, dataType: "json",
 			success: function(data){
 				if(data){
 					pollTO = setTimeout(updatePoll,250);
@@ -133,10 +133,6 @@ $(document).ready(function () {
 						'height': '30px'
 					  }, 350, 'ease-out');
 				}
-			},
-			error: function(x,y,z) {
-				alert(y);
-				alert(z);
 			}
 		});
 	}
@@ -144,7 +140,7 @@ $(document).ready(function () {
 	function updatePoll() {
 		if(pollID==0) return;
 		if (pollReq) pollReq.abort();
-		pollReq = $.getJSON("http://"+nodecg.config.host+":"+nodecg.config.port+"/strawpoll/"+pollID,
+		pollReq = $.getJSON("/strawpoll/"+pollID,
 			function(data){
 				pollTO = setTimeout(updatePoll,250);
 				if(data){
