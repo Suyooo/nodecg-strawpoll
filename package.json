@@ -1,0 +1,37 @@
+{
+  "name": "nodecg-strawpoll",
+  "version": "0.5.0",
+  "nodecgDependency": "^0.6",
+  "homepage": "http://suyo.be",
+  "authors": [
+    "Anthony Oetzmann <aironaudio@googlemail.com>",
+    "Suyooo <me@suyo.be>"
+  ],
+  "files": [
+  	"graphics",
+  	"extension",
+  	"dashboard"
+  ],
+  "nodecg": {
+  	"compatibleRange": "~0.8.0",
+  	"graphics": [
+  		{
+  			"file": "index.html",
+  			"width": 1280,
+  			"height": 720,
+  			"singleInstance": false
+  		}
+  	],
+  	"dashboardPanels": [
+  		{
+			"name": "pollPanel",
+			"title": "StrawPoll",
+			"width": 2,
+			"file": "panel.html",
+			"faIcon": "fa-question"
+  		}
+  	]
+  },
+  "description": "Can display poll results from strawpoll.me",
+  "license": "MIT"
+}
