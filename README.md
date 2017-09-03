@@ -1,4 +1,4 @@
-nodecg-nowplaying
+nodecg-strawpoll
 =================
 
 This <a href="https://github.com/nodecg/nodecg">NodeCG</a> bundle shows poll results from a <a href="http://strawpoll.me">StrawPoll</a> poll.
